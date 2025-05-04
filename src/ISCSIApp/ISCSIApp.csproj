@@ -3,21 +3,22 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting> <!-- Added this line -->
+    <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <ApplicationIcon>Resources\iscsi.ico</ApplicationIcon>
-    <Authors>Infosys</Authors>
-    <Description>Windows iSCSI Initiator Application for connecting to iSCSI targets</Description>
-    <Copyright>Copyright © 2023</Copyright>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>iscsi_icon.ico</ApplicationIcon>
+    <AssemblyName>ISCSIApp</AssemblyName>
+    <RootNamespace>ISCSIApp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="iscsi_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Management" Version="6.0.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
